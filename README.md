@@ -13,7 +13,7 @@ Financial Analysis   ----------------------------   Total Months: 86   Total: $3
 * In addition, my final script prints both the analysis to the terminal and exports a text file with the results. 
 
   
-## PyPoll - In this challenge, my Python script is mean to help a small, rural town modernize its vote counting process.  I am given a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. My task was to create a Python script that analyzes the votes and calculates each of the following:  
+## PyPoll - In this challenge, my Python script needs to help a small, rural town modernize its vote counting process.  I am given a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. My task was to create a Python script that analyzes the votes and calculates each of the following:  
 1.) The total number of votes cast 
 2.) A complete list of candidates who received votes 
 3.) The percentage of votes each candidate won 
