@@ -33,11 +33,12 @@ with open(csvpath, 'r') as csvfile:
     # Iterate through the rows in csv file
     for row in csvreader:
 
-        # Count the unique Voter ID's and store in variable  called total_votes
+        # Count the total votes
         total_votes +=1
 
-        # We have four candidates if the name is found, count the times it appears and store in a list
-        # We can use this values in our percent vote calculation in the print statements
+
+        # If the name in column 3 [2] matches one of the candidates running in the race
+        # then add a vote to that candidate
         if row[2] == "Khan": 
             khan_votes +=1
         elif row[2] == "Correy":
@@ -47,22 +48,22 @@ with open(csvpath, 'r') as csvfile:
         elif row[2] == "O'Tooley":
             otooley_votes +=1
 
- # To find the winner we want to make a dictionary out of the two lists we previously created 
+ # Create a dictionary of the two list that were created 
 candidates = ["Khan", "Correy", "Li","O'Tooley"]
 votes = [khan_votes, correy_votes,li_votes,otooley_votes]
 
-# We zip them together the list of candidate(key) and the total votes(value)
+# Zip the two list together. Candidates is the 'key', and votes is the 'value'
 # Return the winner using a max function of the dictionary 
 dict_candidates_and_votes = dict(zip(candidates,votes))
 key = max(dict_candidates_and_votes, key=dict_candidates_and_votes.get)
 
-# Print a the summary of the analysis
+# Print summary of the analysis
 khan_percent = (khan_votes/total_votes) *100
 correy_percent = (correy_votes/total_votes) * 100
 li_percent = (li_votes/total_votes)* 100
 otooley_percent = (otooley_votes/total_votes) * 100
 
-# Print the summary table
+# Print a summary table of all the relevant information
 print(f"Election Results")
 print(f"----------------------------")
 print(f"Total Votes: {total_votes}")
