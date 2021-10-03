@@ -1,3 +1,15 @@
+#  Your task is to create a Python script that analyzes the records to calculate each of the following:    
+ 
+#  The total number of months included in the dataset    
+ 
+#  The net total amount of "Profit/Losses" over the entire period    
+ 
+#  Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes    
+ 
+#  The greatest increase in profits (date and amount) over the entire period    
+ 
+#  The greatest decrease in profits (date and amount) over the entire period 
+
 import csv
 
 # Define file path for program to go get data
@@ -6,7 +18,6 @@ csvpath = r"E:\Georgia Tech\02-Homework\03-Python\python-challenge\Instructions\
 total_months = []
 total_profit = []
 monthly_change = []
-
 
 
 with open(csvpath, 'r') as csvfile:
